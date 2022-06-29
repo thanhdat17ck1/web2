@@ -1,0 +1,43 @@
+/*------------------------------------------------------------
+contact
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+
+
+.c-contact {
+    display: none;
+
+    @include tab {
+        display: block;
+
+        &__link {
+            position: absolute;
+            top: 0;
+            right: 70px;
+            width: 70px;
+            height: 70px;
+            padding: 13px 0;
+            background: #00ada0;
+            color: #fff;
+            font-weight: bold;
+            font-size: 2rem;
+            text-align: center;
+            cursor: pointer;
+
+            i {
+                font-size: 6rem;
+            }
+
+            span {
+                display: block;
+            }
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+}

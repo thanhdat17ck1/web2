@@ -1,0 +1,62 @@
+/*------------------------------------------------------------
+about
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+
+.c-about {
+    &__top {
+        background-image: url("/assets/img/about-intro_bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-bottom: 100px;
+    }
+
+    &__top-title {
+        text-align: center;
+        margin-top: 55px;
+        line-height: 4.2rem;
+
+        p {
+            font-size: 1.8rem;
+
+            @include xs {
+                font-size: 1.6rem;
+            }
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: 3.2rem;
+            position: relative;
+            z-index: 2;
+
+            @include xs {
+                font-size: 2.4rem;
+            }
+
+            span {
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 15px;
+                    transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    background-color: #fff568;
+                    content: "";
+                }
+            }
+        }
+    }
+
+    &__top-image {
+        text-align: center;
+        margin-top: 50px;
+    }
+}

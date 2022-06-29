@@ -1,0 +1,59 @@
+/*------------------------------------------------------------
+button
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+
+.c-button {
+    text-align: center;
+    padding: 0 10px;
+
+    &__link {
+        display: inline-block;
+        position: relative;
+        padding: 20px;
+        background-color: #00ada0;
+        box-shadow: 4px 4px #000;
+        color: #fff;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: bold;
+        max-width: 410px;
+        width: 100%;
+        border: unset;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        @include xs {
+            padding: 11px 0;
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            box-shadow: 2px 2px #000;
+        }
+    
+        &::after {
+            position: absolute;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            transform: translateX(-100%);
+            transform: translateX(-100%);
+            background: url("/assets/img/arrow-white.svg") center;
+            background-size: cover;
+            content: "";
+    
+            @include xs {
+                width: 15px;
+                height: 15px;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+

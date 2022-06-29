@@ -1,0 +1,67 @@
+/* Header
+------------------------------------------------------------*/
+.c-header {
+    z-index: 111;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+
+    @include tab {
+        position: fixed;
+        top: 0;
+    }
+    
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 53px;
+        font-size: 1.4rem;
+
+        @include tab {
+            display: none;
+        }
+
+        a {
+            position: relative;
+            padding-right: 32px;
+            color: #fff;
+
+            &::before {
+                position: absolute;
+                top: -3px;
+                right: 0;
+                content: "\f138";
+                font-size: 2rem;
+                font-family: "FontAwesome";
+            }
+
+            &:hover {
+                color: #00ada0;
+            }
+        }
+    }
+
+    &__logo {
+        margin-left: 21px;
+
+        @include xl {
+            max-width: 190px;
+        }
+
+        @include sp {
+            max-width: 165px;
+            margin-left: 7px;
+        }
+
+        img {
+            display: block;
+            width: 292px;
+        }
+    }
+    @include sp {
+        .l-container {
+            padding: 0;
+        }
+    }
+}

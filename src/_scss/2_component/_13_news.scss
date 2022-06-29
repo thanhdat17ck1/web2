@@ -1,0 +1,100 @@
+/*------------------------------------------------------------
+news
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+
+.c-news {
+    padding-top: 32px;
+    margin-bottom: 119px;
+    background-image: url("/assets/img/news.png");
+    background-repeat: no-repeat;
+    background-position: 219px 137px;
+    background-size: 290px 400px;
+    display: flex;
+
+    .l-container {
+        width: 100%;
+    }
+
+    @include xl {
+        background-image: unset;
+    }
+
+    @include xs {
+        padding-top: 17px;
+        margin-bottom: 80px;
+    }
+
+    &__top {
+        text-align: center;
+    }
+
+    &__inner {
+        margin-top: 11px;
+        margin-bottom: 51px;
+
+        @include sp {
+            margin-top: 14px;
+            margin-bottom: 33px;
+        }
+    }
+
+    &__list {
+        max-width: 780px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        border-top: 1px solid #ccc;
+
+        &:last-child {
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    &__link {
+        display: flex;
+        padding: 23px 0 22px;
+        line-height: 20px;
+        text-align: left;
+
+        @include sp {
+            display: block;
+            padding: 6px 0 12px;
+            line-height: 2rem;
+            text-align: left;
+        }
+
+        p {
+            display: inline-block;
+            margin-right: 37px;
+            color: #781111;
+            font-size: 1.4rem;
+    
+            @include sp {
+                display: inline-block;
+                margin-right: 37px;
+                color: #781111;
+                font-size: 1.2rem;
+            }
+        }
+    
+        h3 {
+            font-size: 1.6rem;
+            font-weight: normal;
+    
+            @include sp {
+                font-size: 1.3rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                margin-top: 3px;
+            }
+        }
+    }
+
+    
+}

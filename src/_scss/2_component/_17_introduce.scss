@@ -1,0 +1,130 @@
+/*------------------------------------------------------------
+introduce
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+
+.c-introduce {
+
+    @include xs {
+        padding: 0 15px;
+    }
+
+    &__block {
+        
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        margin-bottom: 97px;
+
+        @include xs {
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        &:first-child {
+            .c-introduce {
+                &__block-title {
+                    margin-left: auto;
+                }
+            }
+        }
+
+
+        &:nth-child(1) {
+            .c-introduce {
+                &__block-left {
+                    order: 1;
+
+                    @include lg {
+                        padding-left: 15px;
+                    }
+
+                    @include xs {
+                        padding-left: 0;
+                    }
+                }
+    
+                &__block-right {
+                    order: 2;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            .c-introduce {
+                &__block-left {
+                    order: 2;
+
+                    @include lg {
+                        padding-right: 15px;
+                    }
+
+                    @include xs {
+                        padding-right: 0;
+                    }
+                }
+    
+                &__block-right {
+                    height: 540px;
+                    order: 1;
+                }
+            }
+        }
+    }
+
+    &__block-left {
+        width: 48.5%;
+
+        @include xs {
+            width: 100%;
+        }
+    }
+
+    &__block-right {
+        width: 50%;
+        padding-top: 5px;
+        height: 490px;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include xs {
+            width: 100%;
+        }
+    }
+
+    &__block-title {
+        max-width: 384px;
+
+        @include xs {
+            max-width: 100%;
+        }
+
+        h4 {
+            font-weight: bold;
+            font-size: 2rem;
+            margin-top: -7px;
+
+            @include xs {
+                font-size: 1.8rem;
+            }
+        }
+
+        p {
+            margin-top: 8px;
+            font-size: 1.5rem;
+            line-height: 3rem;
+            text-align: left;
+            letter-spacing: -0.05em;
+            
+            @include xs {
+                font-size: 1.3rem;
+            }
+        }
+        
+    }
+}

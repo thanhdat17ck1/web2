@@ -1,0 +1,46 @@
+/* layout
+------------------------------------------------------------*/
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $main-fonts;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    position: relative;
+    @include sp {
+        min-width: 320px;
+        padding-top: 70px;
+    }
+}
+
+
+//-------------------------------------------------------
+.l-container {
+    max-width: $base-width;
+    margin: 0 auto;
+    position: relative;
+    @include xl {
+        padding: 0 23px;
+    }
+
+    @include sp {
+        padding: 0 15px;
+    }
+}
+
+
+.l-container-sm {
+    max-width: 780px;
+    margin: 0 auto;
+
+    @include lg {
+        padding: 0 15px;
+    }
+}
+
+//-------------------------------------------------------
+

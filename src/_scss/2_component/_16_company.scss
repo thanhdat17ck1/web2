@@ -1,0 +1,92 @@
+/*------------------------------------------------------------
+company
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+
+
+.c-company {
+    &__quote {
+        margin-bottom: 50px;
+        padding-top: 43px;
+
+        .title-quote {
+            &__top {
+                text-align: left;
+
+                &::after {
+                    position: absolute;
+                    width: calc(100% - 35px - 14px);
+                    height: 3px;
+                    transform: translateY(15.5px) translateX(14px);
+                    background-color: #000;
+                    content: "";
+                }
+            }
+
+            &__bot {
+                text-align: right;
+
+                &::after {
+                    position: absolute;
+                    width: calc(100% - 35px - 14px);
+                    height: 3px;
+                    transform: translateY(5.5px) translatex(-112%);
+                    background-color: #000;
+                    content: "";
+                }
+            }
+        }
+    }
+
+    &__quote-title {
+        position: relative;
+        margin: 0 auto;
+        max-width: 480px;
+        font-weight: bold;
+        text-align: center;
+
+        h3 {
+            margin: -8px 0 0;
+            font-size: 2.6rem;
+
+            @include xs {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    &__detail {
+        max-width: 780px;
+        margin: 0 auto;
+
+        dl {
+            border-top: 1px solid #ccc;
+            font-size: 1.6rem;
+            
+            display: flex;
+            padding: 21px 0 25px;
+            line-height: 30px;
+            text-align: left;
+
+            @include xs {
+                font-size: 1.4rem;
+            }
+
+            &:last-child {
+                border-bottom: 1px solid #ccc;
+            }
+
+            a {
+                color: #00a99d;
+            }
+        }
+
+        dt {
+            min-width: 20.51%;
+            font-weight: bold;
+            padding-right: 10px;
+        }
+    }
+}

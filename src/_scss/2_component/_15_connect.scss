@@ -1,0 +1,182 @@
+/*------------------------------------------------------------
+connect
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+
+.c-connect {
+    background: #f8b616;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @include sp {
+        padding-bottom: 45px;
+    }
+
+    &__inner {
+        max-width: 1416px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image {
+        width: 31.1%;
+
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__detail {
+        max-width: 536px;
+        font-size: 1.7rem;
+        position: relative;
+
+        @media only screen and (max-width: 768px) {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @include sp {
+            max-width: 100%;
+            font-size: 1.3rem;
+            line-height: 2rem;
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    &__detail-image {
+        z-index: 10;
+        margin: -75px -52px 0;
+        overflow: hidden;
+
+        @include xl {
+            margin: -75px 0 0;
+        }
+
+        @include lg {
+            text-align: center;
+        }
+
+        &--sp {
+            img {
+                object-fit: cover;
+            }
+            @media only screen and (max-width: 768px) {
+                display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                margin-bottom: 20px;
+
+                img {
+                    width: 50%;
+                    height: 100%;
+                }
+            }
+        }
+
+        @include sp {
+            text-align: center;
+            margin: -75px 0 0;
+
+            &--sp {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 24px;
+            }
+
+            img {
+                display: inline-block;
+            }
+
+            .pc-only {
+                display: none !important;
+            }
+        }
+        // @media only screen 
+        //     and (orientation : landscape) {
+        //     &--sp {
+        //         height: 260px;
+        //     }
+        // }
+
+        @include xs {
+            margin: -42px 0 0;
+            padding: 0 40px;
+        }
+    }
+
+    &__detail-text {
+        margin-top: 38px;
+        margin-bottom: 45px;
+        text-align: center;
+        line-height: 25px;
+
+        @include xs {
+            margin-top: 20px;
+            margin-bottom: 21px;
+            text-align: center;
+            line-height: 20px;
+        }
+    }
+
+    &__detail-button {
+
+        @include xs {
+            padding: 0 25px;
+        }
+
+        a {
+            position: relative;
+            margin: 0 auto;
+            padding: 19px 0;
+            background-color: #fff;
+            color: #00ada0;
+            font-weight: bold;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            text-align: center;
+            max-width: 452px;
+            width: 100%;
+            display: block;
+            transition: 0.3s ease-in-out;
+            border: 2px solid transparent;
+
+            @include xs {
+                padding: 10px 0;
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+                max-width: 410px;
+            }
+
+            &:hover {
+                border: 2px solid #00ada0;
+                opacity: 1;
+            }
+
+            &::after {
+                position: absolute;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                transform: translateX(-100%);
+                transform: translateX(-100%);
+                background: url("/assets/img/arrow-blue.svg") center;
+                background-size: cover;
+                content: "";
+
+                @include xs {
+                    width: 15px;
+                    height: 15px;
+                    right: 15px;
+                }
+            }
+        }
+    }
+}

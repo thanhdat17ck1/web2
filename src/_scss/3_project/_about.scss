@@ -1,0 +1,15 @@
+/*------------------------------------------------------------
+Css of home page
+------------------------------------------------------------*/
+.p-about {
+    line-height: 2;
+
+    &__concept {
+        padding-top: 45px;
+        padding-bottom: 100px;
+
+        @include xs {
+            padding-bottom: 30px;
+        }
+    }
+}

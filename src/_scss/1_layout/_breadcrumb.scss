@@ -1,0 +1,27 @@
+/* Breadcrumb
+------------------------------------------------------------*/
+.c-breadcrumb {
+    padding-top: 23px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.3rem;
+
+    li {
+        display: inline;
+
+        a {
+            padding-bottom: 3px;
+            border-bottom: 1px solid;
+            color: #00ada0;
+        }
+
+        +li {
+            &::before {
+                padding: 15px;
+                content: ">";
+                color: #000;
+            }
+        }
+    }
+}
+

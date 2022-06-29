@@ -1,0 +1,33 @@
+/*------------------------------------------------------------
+mainvisual
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+
+.c-mainvisual {
+    .slick-arrow {
+        display: none !important;
+    }
+
+    .slick-list {
+        img {
+            height: 700px;
+            object-fit: cover;
+            width: 100%;
+            @include xl {
+                height: calc(67vh - 5px);
+            }
+
+            @include lg {
+                height: 50vh;
+            }
+
+            @include sp {
+                height: 44vh;
+                min-height: 374px;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,182 @@
+/*------------------------------------------------------------
+form
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+
+
+
+.c-form {
+    margin-top: 57px;
+    border-top: 1px solid #ccc;
+
+    form {
+        .c-button {
+            margin-top: 42px;
+
+            &__link {
+                max-width: 450px;
+            }
+        }
+    }
+
+    &__row {
+        &:last-child {
+            .c-form {
+                &__item {
+                    padding-bottom: 14px;
+                }
+            }
+        }
+    }
+
+    &__item {
+        padding: 18px 0 22px;
+        font-size: 1.6rem;
+        text-align: left;
+        display: flex;
+
+        @include xs {
+            display: block;
+        }
+    }
+
+    &__row {
+        border-bottom: 1px solid #ccc;
+
+        input {
+            width: 70%;
+            height: 45px;
+            padding: 0 10px;
+            border: unset;
+            background-color: #f2f2f2;
+            border-radius: 0;
+            @include xs {
+                width: 100%;
+            }
+        }
+    
+        textarea {
+            background-color: #f2f2f2;
+            width: 100%;
+            padding: 10px;
+            border: unset;
+            height: 192px;
+        }
+    
+    }
+
+    &__label {
+        min-width: 32.05%;
+        font-weight: bold;
+        line-height: 2.8rem;
+        padding-right: 15px;
+        @include xs {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__box {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    
+        &:last-child {
+            margin-bottom: 0;
+    
+            @include lg {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__checkbox {
+        margin-left: 35px;
+        display: flex;
+        align-items: center;
+
+        @include lg {
+            margin-left: 0;
+            margin-right: 30px;
+            margin-bottom: 5px;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:nth-last-child(2) {
+            margin-left: 0;
+        }
+        
+        @include lg {
+            &.u-mr0 {
+                margin-right: 35px !important;
+            }
+
+            &.u-mt2 {
+                margin-top: 0;
+            }
+        }
+
+        @include xs {
+            margin-right: 10px !important;
+
+            &.u-mr0 {
+                margin-right: 10px !important;
+            }
+        }
+
+        input {
+            width: 17px;
+            height: 17px;
+            margin: -4px 8px 0 1px;
+            
+            @include xs {
+                width: 14px;
+                height: 14px;
+                margin: 1px 3px 0 1px;
+            }
+        }
+
+        .u-w100 {
+            margin-top: 12px;
+            margin-right: 0;
+            height: 45px;
+            @include lg {
+                margin-top: 0;
+            }
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: -3px;
+
+            @include xs {
+                font-weight: bold;
+                font-size: 12px;
+                margin-top: 0;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &.full-width {
+                width: 82%;
+
+                @include lg {
+                    width: 100%;
+                    margin-right: 0 !important;
+                }
+            }
+        }
+    }
+
+}

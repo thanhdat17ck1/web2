@@ -1,0 +1,192 @@
+/*------------------------------------------------------------
+navigation
+------------------------------------------------------------*/
+
+/*
+------------------------------------------------------------*/
+.c-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+
+    @include tab {
+        height: 70px;
+    }
+
+    ul {
+        display: flex;
+
+        @include tab {
+            display: none;
+        }
+
+        li {
+            position: relative;
+
+            a {
+                display: inline-block;
+                padding: 34px 23px;
+                color: #000;
+                font-weight: bold;
+                font-size: 1.6rem;
+                text-align: center;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #00ada0;
+                }
+            }
+
+            &:not(:last-child) {
+                &:hover {
+                    a {
+                        background: #00ada0;
+                        color: #fff;
+                    }
+                }
+            }
+
+            &:last-child {
+                a {
+                    width: 172px;
+                    margin-left: 20px;
+                    background: #00ada0;
+                    color: #fff;
+                    padding: 34px 0;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link-sp {
+        display: none;
+    }
+    @include tab {
+        &__link-sp {
+            display: flex;   
+        }
+
+        &__item-sp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            width: 70px;
+            height: 70px;
+            font-size: 1rem;
+            
+
+            &:first-child {
+                background-color: #00ada0;
+            }
+
+            &:last-child {
+                background-color: #000;
+            }
+
+            img {
+                width: 30px;
+                margin-bottom: 5px;
+            }
+
+            p {
+                line-height: 1.6rem;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+        }
+
+        .item-menu {
+            z-index: 11;
+            position: relative;
+            top: 0;
+            right: 0;
+            background: #000;
+            color: #fff;
+            font-size: 4rem;
+            transition: all 0.5s;
+            transition: all 0.5s;
+
+            a {
+
+                display: block;
+                position: relative;
+                top: -7px;
+                left: 0;
+                width: 30px;
+                height: 2px;
+                border-radius: 3px;
+                background-color: #fff;
+                transition: -webkit-transform 0.3s;
+                transition: -webkit-transform 0.3s;
+                transition: transform 0.3s;
+                transition: transform 0.3s, -webkit-transform 0.3s;
+                
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    right: 0;
+                    width: 30px;
+                    height: 2px;
+                    background-color: #fff;
+                    content: "";
+                    border-radius: 5px;
+                }
+
+                &::before {
+                    bottom: 10px;
+                }
+
+                &::after {
+                    bottom: -10px;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                bottom: 12px;
+                left: 0;
+                width: 100%;
+                content: "メニュー";
+                font-weight: bold;
+                font-size: 10px;
+                text-align: center;
+            }
+
+            &.is-active {
+                background: #00ada0;
+
+                &::after {
+                    content: "閉じる";
+                }
+
+                a {
+                    top: 0;
+                    height: 0;
+    
+                    &::before {
+                        transform: rotate(45deg);
+                    }
+
+                    &::after {
+                        bottom: 10px;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
